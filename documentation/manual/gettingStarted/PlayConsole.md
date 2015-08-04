@@ -67,15 +67,8 @@ Type `console` to enter the interactive Scala console, which allows you to test 
 ```
 
 To start application inside scala console (e.g. to access database):
-```bash
-scala> import play.api._
-scala> val env = Environment(new java.io.File("."), this.getClass.getClassLoader, Mode.Dev)
-scala> val context = ApplicationLoader.createContext(env)
-scala> val loader = ApplicationLoader(context)
-scala> val app = loader.load(context)
-scala> Play.start(app)
-scala> import Play.current
-```
+
+@[consoleapp](code/PlayConsole.scala)
 
 [[images/consoleEval.png]] 
 
